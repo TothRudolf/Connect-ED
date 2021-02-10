@@ -54,18 +54,12 @@ export function register(config) {
   }
 }
 
-const { createProxyClient } = require('ipfs-postmsg-proxy')
-let node;
-
 function registerValidSW(swUrl, config) {
   console.log('About to register service worker');
   navigator.serviceWorker
     .register(swUrl)
     .then(registration => {
       console.log('Service worker registered');
-
-      console.log('Creating proxy IPFS node');
-      createIpfsProxyNode();
 
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
@@ -105,17 +99,6 @@ function registerValidSW(swUrl, config) {
     .catch(error => {
       console.error('Error during service worker registration:', error);
     });
-
-  function createIpfsProxyNode() {
-    node = createProxyClient({
-      addListener: navigator.serviceWorker.addEventListener.bind(navigator.serviceWorker),
-      removeListener: navigator.serviceWorker.removeEventListener.bind(navigator.serviceWorker),
-      postMessage: (data) => navigator.serviceWorker.controller.postMessage(data) //TODO the contoller can be null here, check skipWaiting in the docs
-    });
-
-    node.id()
-      .then(info => console.log('IPFS proxy is ready, which will connect to service worker IPFS node started with id:', info.id));
-  }
 }
 
 function checkValidServiceWorker(swUrl, config) {
