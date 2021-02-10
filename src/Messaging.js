@@ -8,6 +8,7 @@ import TextForm from './TextForm';
 import NameForm from './NameForm';
 import TestArea from './TestArea';
 import ThreadForm from './ThreadForm';
+import Slider from './Slider';
 
 class Messaging extends React.Component {
     constructor(props) {
@@ -124,6 +125,7 @@ class Messaging extends React.Component {
                     <TabPane tabId="1">
                         <br />
                         <TextForm send={this.assembleAndSendMessage} messageUpdate={this.messageUpdate} />
+                        <Slider/>
                     </TabPane>
                     <TabPane tabId="2">
                         <br />

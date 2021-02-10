@@ -1,5 +1,5 @@
 {
-  "name": "Connect-ED",
+  "name": "connect-ed",
   "homepage": "./",
   "version": "0.1.0",
   "private": true,
@@ -11,9 +11,6 @@
     "bootstrap": "^4.3.1",
     "browserify": "^16.2.3",
     "fs-extra": "^7.0.1",
-    "ipfs": "0.37.1",
-    "ipfs-postmsg-proxy": "^3.1.1",
-    "is-ipfs": "^0.6.1",
     "pull-file-reader": "^1.0.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
@@ -24,16 +21,8 @@
   },
   "scripts": {
     "start": "react-scripts --max_old_space_size=4096 start",
-    "build-local": "npm run delete-local && react-scripts --max_old_space_size=4096 build && npm run bundle-sw-dependencies-local && sw-precache --config=sw-precache-config-local.js && npm run rename-local",
-    "build": "react-scripts --max_old_space_size=4096 build && npm run bundle-sw-dependencies && npm run minify && sw-precache --config=sw-precache-config.js",
-    "delete-local": "node -e \"require('fs-extra').remove('d-chat', function(err) { if (err) console.log(err); console.log('Successfully deleted!') })\"",
-    "rename-local": "node -e \"require('fs').rename('build', 'd-chat', function(err) { if (err) console.log(err); console.log('Successfully renamed!') })\"",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "bundle-sw-dependencies-local": "browserify src/ipfsServiceWorker.js -o build/service-worker-ipfs.js -d",
-    "bundle-sw-dependencies": "browserify src/ipfsServiceWorker.js -o build/service-worker-ipfs.js",
-    "minify": "terser build/service-worker-ipfs.js --output build/service-worker-ipfs.min.js && npm run cleanup",
-    "cleanup": "rm build/service-worker-ipfs.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

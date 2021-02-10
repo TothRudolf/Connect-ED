@@ -137,18 +137,17 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <img src="ipfs/QmSGfXuqtuGX5FLdBEH5hRQJc6ZrZWV6rqExLXjfpsihV2" style={{ display: "none" }} alt="" />
                 <Navbar className="header" color="faded" light expand="md">
                     <Container>
-                        <NavbarBrand className="mr-auto" to="/">d-chat v2</NavbarBrand>
+                        <NavbarBrand className="mr-auto" to="/">ConnectED</NavbarBrand>
                         <NavbarToggler onClick={this.toggleNavbar} />
                         <Collapse navbar isOpen={this.state.showNavbar}>
                             <Nav navbar className="ml-sm-auto">
                                 <NavItem>
-                                    <NavLink href="https://github.com/orbitdb/orbit-db">OrbitDB</NavLink>
+                                    <NavLink href="">Iskola weboldala</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="https://ipfs.io">IPFS</NavLink>
+                                    <NavLink href="">Teams</NavLink>
                                 </NavItem>
                             </Nav>
                         </Collapse>
