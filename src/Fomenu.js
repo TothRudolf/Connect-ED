@@ -9,8 +9,9 @@ import NameForm from './NameForm';
 import TestArea from './TestArea';
 import ThreadForm from './ThreadForm';
 import Slider from './Slider';
+import Ujkerdoiv from './Ujkerdoiv';
 
-class Messaging extends React.Component {
+class Fomenu extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -85,7 +86,7 @@ class Messaging extends React.Component {
                             className={classnames({ active: this.state.activeTab === '1' })}
                             onClick={() => { this.toggle('1'); }}
                         >
-                            Send text
+                            Kérdőív létrehozása
                         </NavLink>
                     </NavItem>
                     <NavItem>
@@ -93,7 +94,7 @@ class Messaging extends React.Component {
                             className={classnames({ active: this.state.activeTab === '2' })}
                             onClick={() => { this.toggle('2'); }}
                         >
-                            Send photo
+                            Kérdőív listája
                          </NavLink>
                     </NavItem>
                     <NavItem>
@@ -124,8 +125,7 @@ class Messaging extends React.Component {
                 <TabContent activeTab={this.state.activeTab}>
                     <TabPane tabId="1">
                         <br />
-                        <TextForm send={this.assembleAndSendMessage} messageUpdate={this.messageUpdate} />
-                        <Slider/>
+                        <Ujkerdoiv/>
                     </TabPane>
                     <TabPane tabId="2">
                         <br />
@@ -149,4 +149,4 @@ class Messaging extends React.Component {
     }
 }
 
-export default Messaging;
+export default Fomenu;

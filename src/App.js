@@ -6,8 +6,7 @@ import { NavbarToggler, Collapse, Navbar, NavbarBrand, Nav, NavItem, NavLink } f
 import toaster from 'toasted-notes';
 import 'toasted-notes/src/styles.css';
 
-import MessageList from './MessageList.js'
-import Messaging from './Messaging.js';
+import Fomenu from './Fomenu.js';
 
 class App extends React.Component {
 
@@ -55,7 +54,7 @@ class App extends React.Component {
                 position: 'bottom-right',
                 duration: 3000
             });
-            return;
+            return;     
         } else if (event.data.command === 'appPinned') {
             toaster.notify('Serving application to peers', {
                 position: 'bottom-right',
@@ -117,9 +116,8 @@ class App extends React.Component {
                     <Row className="justify-content-sm-center">
                         <Col >
                             <main>
-                                <MessageList messages={messages} />
-                                <br />
-                                <Messaging send={this.sendMessageToWorker}
+                                
+                                <Fomenu send={this.sendMessageToWorker}
                                     saveUsername={this.saveUsername}
                                     name={this.state.name}
                                     threadName={this.state.threadName}
@@ -144,7 +142,7 @@ class App extends React.Component {
                         <Collapse navbar isOpen={this.state.showNavbar}>
                             <Nav navbar className="ml-sm-auto">
                                 <NavItem>
-                                    <NavLink href="">Iskola weboldala</NavLink>
+                                    <NavLink href="https://apaczai.ro/">Iskola weboldala</NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink href="">Teams</NavLink>
