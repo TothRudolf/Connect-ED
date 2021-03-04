@@ -10,6 +10,7 @@ import TestArea from './TestArea';
 import ThreadForm from './ThreadForm';
 import Slider from './Slider';
 import Ujkerdoiv from './Ujkerdoiv';
+import DiakForm from './DiakForm';
 
 class Fomenu extends React.Component {
     constructor(props) {
@@ -102,7 +103,7 @@ class Fomenu extends React.Component {
                             className={classnames({ active: this.state.activeTab === '3' })}
                             onClick={() => { this.toggle('3'); }}
                         >
-                            Settings
+                            Diak Form
                          </NavLink>
                     </NavItem>
                     <NavItem>
@@ -133,7 +134,7 @@ class Fomenu extends React.Component {
                     </TabPane>
                     <TabPane tabId="3">
                         <br />
-                        <NameForm save={this.saveUsername} nameUpdate={this.nameUpdate} name={this.props.name} isNameAvailable={this.props.isNameAvailable} />
+                        <DiakForm/>
                     </TabPane>
                     <TabPane tabId="4">
                         <br />
