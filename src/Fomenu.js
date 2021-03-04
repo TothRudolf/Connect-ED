@@ -10,6 +10,7 @@ import TestArea from './TestArea';
 import ThreadForm from './ThreadForm';
 import Slider from './Slider';
 import Ujkerdoiv from './Ujkerdoiv';
+import Kerdoivek from './Kerdoivek';
 
 class Fomenu extends React.Component {
     constructor(props) {
@@ -129,11 +130,11 @@ class Fomenu extends React.Component {
                     </TabPane>
                     <TabPane tabId="2">
                         <br />
-                        <ImageForm send={this.assembleAndSendMessage} imageUpdate={this.imageUpdate} />
+                        
                     </TabPane>
                     <TabPane tabId="3">
                         <br />
-                        <NameForm save={this.saveUsername} nameUpdate={this.nameUpdate} name={this.props.name} isNameAvailable={this.props.isNameAvailable} />
+                        
                     </TabPane>
                     <TabPane tabId="4">
                         <br />
