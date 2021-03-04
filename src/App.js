@@ -110,7 +110,7 @@ class App extends React.Component {
         return (
             <div>
                 <Container tag="section" className="text-center mb-4">
-                    <img src="logo.png" alt="" width="80px" />
+                    <img src="logo.png" alt="" width="135px" />
                 </Container>
                 <Container>
                     <Row className="justify-content-sm-center">
