@@ -10,11 +10,9 @@ import TestArea from './TestArea';
 import ThreadForm from './ThreadForm';
 import Slider from './Slider';
 import Ujkerdoiv from './Ujkerdoiv';
-<<<<<<< HEAD
 import Kerdoivek from './Kerdoivek';
-=======
 import DiakForm from './DiakForm';
->>>>>>> 84f83010ac133ea8e4b39463dc53f58caad81182
+import List from "reactstrap";
 
 class Fomenu extends React.Component {
     constructor(props) {
@@ -138,11 +136,7 @@ class Fomenu extends React.Component {
                     </TabPane>
                     <TabPane tabId="3">
                         <br />
-<<<<<<< HEAD
-                        
-=======
                         <DiakForm/>
->>>>>>> 84f83010ac133ea8e4b39463dc53f58caad81182
                     </TabPane>
                     <TabPane tabId="4">
                         <br />
