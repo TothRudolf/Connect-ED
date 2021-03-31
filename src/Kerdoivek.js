@@ -1,26 +1,22 @@
 import React from 'react';
-import { List,ListGroup,ListGroupItem } from 'reactstrap';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 
-const Kerdoivek = (props) => {
+const Example = (props) => {
   return (
-    <List type="unstyled">
-      <li>Lorem ipsum dolor sit amet</li>
-      <li>Consectetur adipiscing elit</li>
-      <li>Integer molestie lorem at massa</li>
-      <li>Facilisis in pretium nisl aliquet</li>
-      <li>Nulla volutpat aliquam velit
-        <ul>
-          <li>Phasellus iaculis neque</li>
-          <li>Purus sodales ultricies</li>
-          <li>Vestibulum laoreet porttitor sem</li>
-          <li>Ac tristique libero volutpat at</li>
-        </ul>
-      </li>
-      <li>Faucibus porta lacus fringilla vel</li>
-      <li>Aenean sit amet erat nunc</li>
-      <li>Eget porttitor lorem</li>
-    </List>
+    <div>
+     
+     
+    
+      <h3>Kérdőívek </h3>
+      <ListGroup>
+        <ListGroupItem tag="button" action>Milyen hatékony volt a pénteki óra?</ListGroupItem>
+        <ListGroupItem tag="button" action>Mit értetél meg az integrálásból?</ListGroupItem>
+        <ListGroupItem tag="button" action>Románia földrajza megy-e?</ListGroupItem>
+        <ListGroupItem tag="button" action>Várod a vakációt?</ListGroupItem>
+        
+      </ListGroup>
+    </div>
   );
 }
 
-export default Kerdoivek;
+export default Example;

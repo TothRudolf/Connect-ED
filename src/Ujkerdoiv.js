@@ -7,13 +7,13 @@ const Ujkerdoiv = (props) => {
       <FormGroup row>
         <Label for="exampleEmail" sm={2}>Kérdőív neve</Label>
         <Col sm={10}>
-          <Input type="text" name="text" id="exampleEmail" placeholder="Nevezze el kérdőívét?" />
+          <Input type="text" name="text" id="exampleEmail" placeholder="Nevezze el kérdőívét." />
         </Col>
       </FormGroup>
       <FormGroup row>
         <Label for="examplePassword" sm={2}>Kérdések</Label>
         <Col sm={10}>
-          <Input type="text" name="tex2" id="examplePassword" placeholder="Ide jönnek a kérések?" />
+          <Input type="text" name="tex2" id="examplePassword" placeholder="Ide jön a kérdése." />
         </Col>
       </FormGroup>
     

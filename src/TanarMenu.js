@@ -11,7 +11,6 @@ import ThreadForm from './ThreadForm';
 import Slider from './Slider';
 import Ujkerdoiv from './Ujkerdoiv';
 import Kerdoivek from './Kerdoivek';
-///import DiakForm from './DiakForm';
 import List from "reactstrap";
 
 class TanarMenu extends React.Component {
@@ -75,7 +74,7 @@ class TanarMenu extends React.Component {
                     </TabPane>
                     <TabPane tabId="2">
                         <br />
-                        
+                    <Kerdoivek/>
                     </TabPane>
                     <TabPane tabId="3">
                         <br />
