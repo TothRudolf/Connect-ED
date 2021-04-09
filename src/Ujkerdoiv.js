@@ -20,13 +20,10 @@ const Ujkerdoiv = (props) => {
     
      
       <FormGroup row>
-        <Label for="checkbox2" sm={2}>Checkbox</Label>
+       
         <Col sm={{ size: 10 }}>
           <FormGroup check>
-            <Label check>
-              <Input type="checkbox" id="checkbox2" />{' '}
-              Anonim mode
-            </Label>
+            
           </FormGroup>
         </Col>
       </FormGroup>

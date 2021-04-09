@@ -1,5 +1,5 @@
 import React from 'react'
-import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Progress } from 'reactstrap';
 
 import classnames from 'classnames';
 import Container from 'reactstrap/lib/Container';
@@ -12,6 +12,7 @@ import Slider from './Slider';
 import Ujkerdoiv from './Ujkerdoiv';
 import Kerdoivek from './Kerdoivek';
 import List from "reactstrap";
+
 
 class TanarMenu extends React.Component {
     constructor(props) {
@@ -62,7 +63,7 @@ class TanarMenu extends React.Component {
                             className={classnames({ active: this.state.activeTab === '3' })}
                             onClick={() => { this.toggle('3'); }}
                         >
-                            Eredmények
+                            
                          </NavLink>
                     </NavItem>
                     
@@ -76,10 +77,12 @@ class TanarMenu extends React.Component {
                         <br />
                     <Kerdoivek/>
                     </TabPane>
-                    <TabPane tabId="3">
-                        <br />
+                
+                        
+                        
                      
-                    </TabPane>
+                    
+                
                    
                 </TabContent>
             </Container>
