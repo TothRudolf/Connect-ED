@@ -11,8 +11,8 @@ import ThreadForm from './ThreadForm';
 import Slider from './Slider';
 import Ujkerdoiv from './Ujkerdoiv';
 import Kerdoivek from './Kerdoivek';
-///import DiakForm from './DiakForm';
 import List from "reactstrap";
+import Valasz from "./Valasz"
 
 class DiakMenu extends React.Component {
     constructor(props) {
@@ -57,7 +57,7 @@ class DiakMenu extends React.Component {
                 <TabContent activeTab={this.state.activeTab}>
                     <TabPane tabId="1">
                         <br />
-                       
+                       <Valasz/>
                     </TabPane>
                    
                 </TabContent>
