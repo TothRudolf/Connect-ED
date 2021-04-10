@@ -1,5 +1,5 @@
 
-import { ListGroup, ListGroupItem,Button, Modal, ModalHeader, ModalBody, ModalFooter, Progress } from 'reactstrap';
+import { ListGroup, ListGroupItem,Button, Modal, ModalHeader, ModalBody, ModalFooter, Progress, UncontrolledAlert , Alert} from 'reactstrap';
 import React, { useState } from 'react';
 
 const popup = (props) => {
@@ -11,6 +11,10 @@ const popup = (props) => {
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
+  
+  const [visible, setVisible] = useState(true);
+
+  const onDismiss = () => setVisible(false)
 
   return (
     <div>
@@ -19,11 +23,11 @@ const popup = (props) => {
     
       <h3>Kérdőívek </h3>
       <ListGroup>
-        <ListGroupItem color="primary" onClick={toggle}>{buttonLabel} Milyen hatékony volt a pénteki óra?</ListGroupItem>
+        <UncontrolledAlert color="primary"  onClick={toggle}>{buttonLabel} Milyen hatékony volt a pénteki óra?</UncontrolledAlert >
 
-        <ListGroupItem color="info" onClick={toggle}>{buttonLabel}Mit értetél meg az integrálásból?</ListGroupItem>
-        <ListGroupItem color="success" onClick={toggle}>{buttonLabel}Románia földrajza megy-e?</ListGroupItem>
-        <ListGroupItem color="warning" onClick={toggle}>{buttonLabel}Várod a vakációt?</ListGroupItem>
+        <UncontrolledAlert color="info" onClick={toggle}>{buttonLabel}Mit értetél meg az integrálásból?</UncontrolledAlert>
+        <UncontrolledAlert color="success" onClick={toggle}>{buttonLabel}Románia földrajza megy-e?</UncontrolledAlert>
+        <UncontrolledAlert color="warning" onClick={toggle}>{buttonLabel}Várod a vakációt?</UncontrolledAlert>
         
       </ListGroup>
       

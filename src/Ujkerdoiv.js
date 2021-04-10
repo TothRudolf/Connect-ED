@@ -1,7 +1,14 @@
-import React from 'react';
-import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import React, { useState } from 'react';
+import { Col, Button, Form, FormGroup, Label, Input, FormText,ListGroup, ListGroupItem, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 const Ujkerdoiv = (props) => {
+  const {
+    buttonLabel,
+    className
+  } = props;
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
   return (
     <Form>
       <FormGroup row>
@@ -29,10 +36,24 @@ const Ujkerdoiv = (props) => {
       </FormGroup>
       <FormGroup check row>
         <Col sm={{ size: 10, offset: 2}}>
-          <Button>Submit</Button>
+          <Button  onClick={toggle}>{buttonLabel}Submit</Button>
+          <Modal isOpen={modal} toggle={toggle} className={className}>
+        <ModalHeader toggle={toggle}>Kérdőív sikeresen létrehozva </ModalHeader>
+        <ModalBody>
+          <h4>Kérdése: Milyen hatékony volt a pénteki óra?</h4>
+          <br></br>
+          
+      <h2>Kérdőív kódja: 832812</h2>
+        </ModalBody>
+        <ModalFooter>
+          
+          <Button color="danger" onClick={toggle}>Visszatér</Button>
+        </ModalFooter>
+      </Modal>
         </Col>
       </FormGroup>
     </Form>
+    
   );
 }
 
