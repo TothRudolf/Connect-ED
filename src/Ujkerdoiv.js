@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Col, Button, Form, FormGroup, Label, Input, FormText,ListGroup, ListGroupItem, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Col, Button, Form, FormGroup, Label, Input, FormText,ListGroup, ListGroupItem, Modal, ModalHeader, ModalBody, ModalFooter, } from 'reactstrap';
 
 const Ujkerdoiv = (props) => {
   const {
@@ -7,7 +7,12 @@ const Ujkerdoiv = (props) => {
     className
   } = props;
   const [modal, setModal] = useState(false);
-
+  function Random(props) {
+    var maxNumber = 100000;
+    var randomNumber = Math.floor((Math.random() * maxNumber) + 100000);
+    return <h2>{randomNumber}</h2>;
+  }
+  
   const toggle = () => setModal(!modal);
   return (
     <Form>
@@ -20,7 +25,7 @@ const Ujkerdoiv = (props) => {
       <FormGroup row>
         <Label for="examplePassword" sm={2}>Kérdések</Label>
         <Col sm={10}>
-          <Input type="text" name="tex2" id="examplePassword" placeholder="Ide jön a kérdése." />
+          <Input type="text" name="text2" id="example" placeholder="Ide jön a kérdése." />
         </Col>
       </FormGroup>
     
@@ -40,11 +45,15 @@ const Ujkerdoiv = (props) => {
           <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Kérdőív sikeresen létrehozva </ModalHeader>
         <ModalBody>
-          <h4>Kérdése: Milyen hatékony volt a pénteki óra?</h4>
+          <h4>Kérdése:</h4>
+          <text2/>
           <br></br>
           
-      <h2>Kérdőív kódja: 832812</h2>
+      <h2>Kérdőív kódja: </h2>
+    
+        <Random />
         </ModalBody>
+        
         <ModalFooter>
           
           <Button color="danger" onClick={toggle}>Visszatér</Button>

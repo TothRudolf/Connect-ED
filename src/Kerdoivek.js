@@ -25,7 +25,7 @@ const popup = (props) => {
       <ListGroup>
         <UncontrolledAlert color="primary"  onClick={toggle}>{buttonLabel} Milyen hatékony volt a pénteki óra?</UncontrolledAlert >
 
-        <UncontrolledAlert color="info" onClick={toggle}>{buttonLabel}Mit értetél meg az integrálásból?</UncontrolledAlert>
+        <UncontrolledAlert color="info" onClick={toggle}>{buttonLabel}Mennyire értetted meg az integrálást?</UncontrolledAlert>
         <UncontrolledAlert color="success" onClick={toggle}>{buttonLabel}Románia földrajza megy-e?</UncontrolledAlert>
         <UncontrolledAlert color="warning" onClick={toggle}>{buttonLabel}Várod a vakációt?</UncontrolledAlert>
         
