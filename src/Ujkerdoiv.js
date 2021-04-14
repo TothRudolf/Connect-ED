@@ -45,7 +45,7 @@ const Ujkerdoiv = (props) => {
           <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Kérdőív sikeresen létrehozva </ModalHeader>
         <ModalBody>
-          <h4>Kérdése:</h4>
+          <h4>Kérdése: Mennyire volt hatékony a pénteki matekóra?</h4>
           <text2/>
           <br></br>
           

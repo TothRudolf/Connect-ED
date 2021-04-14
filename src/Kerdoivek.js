@@ -23,10 +23,10 @@ const popup = (props) => {
     
       <h3>Kérdőívek </h3>
       <ListGroup>
-        <UncontrolledAlert color="primary"  onClick={toggle}>{buttonLabel} Milyen hatékony volt a pénteki óra?</UncontrolledAlert >
+        <UncontrolledAlert color="primary"  onClick={toggle}>{buttonLabel} Mennyire volt hatékony a pénteki matekóra?</UncontrolledAlert >
 
         <UncontrolledAlert color="info" onClick={toggle}>{buttonLabel}Mennyire értetted meg az integrálást?</UncontrolledAlert>
-        <UncontrolledAlert color="success" onClick={toggle}>{buttonLabel}Románia földrajza megy-e?</UncontrolledAlert>
+        <UncontrolledAlert color="success" onClick={toggle}>{buttonLabel}Mennyire sikerült elsajátítani Románia földrajzát?</UncontrolledAlert>
         <UncontrolledAlert color="warning" onClick={toggle}>{buttonLabel}Várod a vakációt?</UncontrolledAlert>
         
       </ListGroup>
