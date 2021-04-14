@@ -27,7 +27,7 @@ const popup = (props) => {
 
         <UncontrolledAlert color="info" onClick={toggle}>{buttonLabel}Mennyire értetted meg az integrálást?</UncontrolledAlert>
         <UncontrolledAlert color="success" onClick={toggle}>{buttonLabel}Mennyire sikerült elsajátítani Románia földrajzát?</UncontrolledAlert>
-        <UncontrolledAlert color="warning" onClick={toggle}>{buttonLabel}Várod a vakációt?</UncontrolledAlert>
+        <UncontrolledAlert color="warning" onClick={toggle}>{buttonLabel}Milyen mértékben értetted meg a hétfői fizika leckét?</UncontrolledAlert>
         
       </ListGroup>
       
