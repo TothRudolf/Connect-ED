@@ -4,10 +4,18 @@ import TanariFelulet from './TanariFelulet.js'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Button, Spinner, Container, Row, Col, Jumbotron } from 'reactstrap';
 import { NavbarToggler, Collapse, Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-
+import registerServiceWorker from './registerServiceWorker';
 import toaster from 'toasted-notes';
 import 'toasted-notes/src/styles.css';
+///ez a 2 vart adtam hozza 
+var admin = require("firebase-admin");
 
+var serviceAccount = require("path/to/serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://connected-5c042.firebaseio.com"
+});
 
 class App extends React.Component {
 
@@ -80,3 +88,4 @@ class App extends React.Component {
 }
 
 export default App;
+
