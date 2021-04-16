@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Button, Form, FormGroup, Label, Input, FormText, ListGroup, ListGroupItem, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import firebase from './firebase.js';
+
 
 const Ujkerdoiv = (props) => {
 
@@ -18,14 +20,15 @@ const Ujkerdoiv = (props) => {
 
   const savekerdoiv = () => {
     toggle();
+    console.log('asdadsadsas')
 
-    // const todoRef = firebase.database().ref('Todo');
+    const todoRef = firebase.database().ref('kerdoivek');
     const todo = {
       title: "anyad2",
       complete: "anyad"
     };
 
-    // todoRef.push(todo);
+    todoRef.push(todo);
   }
 
 
@@ -58,11 +61,11 @@ const Ujkerdoiv = (props) => {
       <FormGroup check row>
         <Col sm={{ size: 10, offset: 2 }}>
           <Button onClick={savekerdoiv}>{buttonLabel}Submit</Button>
-          <Modal onclick={toggle} isOpen={modal} toggle={toggle} className={className}>
+          <Modal onClick={toggle} isOpen={modal} toggle={toggle} className={className}>
             <ModalHeader toggle={toggle}>Kérdőív sikeresen létrehozva </ModalHeader>
             <ModalBody>
               <h4>Kérdése: Mennyire volt hatékony a pénteki matekóra?</h4>
-              <text2 />
+              
               <br></br>
 
               <h2>Kérdőív kódja: </h2>
