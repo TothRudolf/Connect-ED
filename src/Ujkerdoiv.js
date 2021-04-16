@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import { Col, Button, Form, FormGroup, Label, Input, FormText, ListGroup, ListGroupItem, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-
 const Ujkerdoiv = (props) => {
-  constructor(props){
-
-    this.setState({
-      usersCollection: db.collection("users")
-    });
-  }
 
   const {
     buttonLabel,
     className
   } = props;
+
   const [modal, setModal] = useState(false);
+
   function Random(props) {
     var maxNumber = 100000;
     var randomNumber = Math.floor((Math.random() * maxNumber) + 100000);
@@ -23,14 +18,14 @@ const Ujkerdoiv = (props) => {
 
   const savekerdoiv = () => {
     toggle();
-    collection.add(document).then(function (doc) {
-      console.log("Document successfully created!");
 
-    })
-      .catch(function (error) {
-        console.error("Error adding document: ", error);
-      });
+    // const todoRef = firebase.database().ref('Todo');
+    const todo = {
+      title: "anyad2",
+      complete: "anyad"
+    };
 
+    // todoRef.push(todo);
   }
 
 
@@ -62,8 +57,8 @@ const Ujkerdoiv = (props) => {
       </FormGroup>
       <FormGroup check row>
         <Col sm={{ size: 10, offset: 2 }}>
-          <Button onClick={toggle}>{buttonLabel}Submit</Button>
-          <Modal onclick={addButton} isOpen={modal} toggle={toggle} className={className}>
+          <Button onClick={savekerdoiv}>{buttonLabel}Submit</Button>
+          <Modal onclick={toggle} isOpen={modal} toggle={toggle} className={className}>
             <ModalHeader toggle={toggle}>Kérdőív sikeresen létrehozva </ModalHeader>
             <ModalBody>
               <h4>Kérdése: Mennyire volt hatékony a pénteki matekóra?</h4>
