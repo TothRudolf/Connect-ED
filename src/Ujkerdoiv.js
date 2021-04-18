@@ -24,8 +24,8 @@ const Ujkerdoiv = (props) => {
 
     const todoRef = firebase.database().ref('kerdoivek');
     const todo = {
-      title: "anyad2",
-      complete: "anyad"
+      title: "Kerdoiv neve",
+      complete: "kerdes"
     };
 
     todoRef.push(todo);

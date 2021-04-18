@@ -1,6 +1,7 @@
 import { RadioButton, Slider } from 'material-ui';
 import React, { useState } from 'react';
 import { MDBRangeInput } from "mdbreact";
+import firebase from './firebase'
 
 import { Col, Button, Form, FormGroup, Label, Input, FormText,ListGroup, ListGroupItem, Modal, ModalHeader, ModalBody, ModalFooter, } from 'reactstrap';
 
@@ -10,7 +11,18 @@ const Valasz = (props) => {
     className
   } = props;
   const [modal, setModal] = useState(false);
-  
+  const savevalasz = () => {
+    toggle();
+    console.log('hello')
+
+    const todoRef = firebase.database().ref('valaszok');
+    const todo = {
+      title: "neve",
+      complete: "ertek"
+    };
+
+    todoRef.push(todo);
+  }
   
   
   const toggle = () => setModal(!modal);

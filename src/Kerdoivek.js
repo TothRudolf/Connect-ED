@@ -1,7 +1,7 @@
 
 import { ListGroup, ListGroupItem,Button, Modal, ModalHeader, ModalBody, ModalFooter, Progress, UncontrolledAlert , Alert} from 'reactstrap';
 import React, { useState } from 'react';
-
+import firebase from 'firebase';
 const popup = (props) => {
   const {
     buttonLabel,
@@ -13,9 +13,20 @@ const popup = (props) => {
   const toggle = () => setModal(!modal);
   
   const [visible, setVisible] = useState(true);
+  const torles = () => {
+    toggle();
+    console.log('eiajdas')
 
-  const onDismiss = () => setVisible(false)
+   
+    const onDismiss = () => setVisible(false)
+    const deleteTodo = () => {
+      const todoRef = firebase.database().ref('Todo').child(todo.id);
+      todoRef.remove();
+    };
+    todoRef.push(todo);
+  }
 
+  
   return (
     <div>
      
@@ -39,7 +50,7 @@ const popup = (props) => {
       <Progress value={75} />
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={toggle}>Részletek megtekintése</Button>{' '}
+          <Button color="primary" onClick={deleteTodo}>Kerdoiv törlése</Button>{' '}
           <Button color="secondary" onClick={toggle}>Visszatér</Button>
         </ModalFooter>
       </Modal>
