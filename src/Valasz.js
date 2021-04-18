@@ -17,6 +17,7 @@ const Valasz = (props) => {
 
     const todoRef = firebase.database().ref('valaszok');
     const todo = {
+      id: "kod",
       title: "neve",
       complete: "ertek"
     };
