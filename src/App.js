@@ -82,7 +82,7 @@ class App extends React.Component {
                                     <NavLink href="https://apaczai.ro/">Iskola weboldala</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="">Teams</NavLink>
+                                    <NavLink href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software">Teams</NavLink>
                                 </NavItem>
                             </Nav>
                         </Collapse>

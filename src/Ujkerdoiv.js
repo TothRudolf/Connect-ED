@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Button, Form, FormGroup, Label, Input, FormText, ListGroup, ListGroupItem, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import firebase from './firebase.js';
+import Valasz from './Valasz.js';
 
 
 const Ujkerdoiv = (props) => {
@@ -64,8 +65,8 @@ const Ujkerdoiv = (props) => {
           <Modal onClick={toggle} isOpen={modal} toggle={toggle} className={className}>
             <ModalHeader toggle={toggle}>Kérdőív sikeresen létrehozva </ModalHeader>
             <ModalBody>
-              <h4>Kérdése: Mennyire volt hatékony a pénteki matekóra?</h4>
-              
+              <h4>Kérdése:</h4>
+              <kerdes></kerdes>
               <br></br>
 
               <h2>Kérdőív kódja: </h2>

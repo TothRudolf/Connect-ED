@@ -20,7 +20,7 @@ const Valasz = (props) => {
       id: "kod",
       title: "neve",
       complete: "ertek"
-    };
+    };  
 
     todoRef.push(todo);
   }
@@ -54,7 +54,7 @@ const Valasz = (props) => {
           <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Válaszoljon a kérdésre</ModalHeader>
         <ModalBody>
-          <h4>Kérdés:</h4>
+          <h4>Kérdés: Mennyire volt hatékony a pénteki matekóra?</h4>
         
           <div className="my-5">
       <label htmlFor="customRange1">Example range</label>
@@ -71,7 +71,7 @@ const Valasz = (props) => {
               <Input color="warning" type="checkbox"  name="radio2" />{' '}
               Annonim mód
             </Label>
-          <Button color="success" onClick={toggle}>Küldje el válaszát</Button>
+          <Button color="success" onClick={savevalasz}>Küldje el válaszát</Button>
         </ModalFooter>
       </Modal>
         </Col>
